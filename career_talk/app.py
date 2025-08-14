@@ -24,9 +24,9 @@ class Session(db.Model):
         return f"<Session {self.title} by {self.speaker}>"
 
 
-@app.before_first_request
-def create_tables():
-    os.makedirs(app.instance_path, exist_ok=True)
+# Create instance folder and tables at startup (Flask 3 removed before_first_request)
+os.makedirs(app.instance_path, exist_ok=True)
+with app.app_context():
     db.create_all()
 
 
