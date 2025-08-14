@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Upcoming Sessions</h1>
+	{% if sessions %}
+		<ul>
+			{% for s in sessions %}
+				<li>
+					<article>
+						<header>
+							<strong><a href="{{ url_for('session_detail', session_id=s.id) }}">{{ s.title }}</a></strong>
+						</header>
+						<p>
+							By {{ s.speaker }} · {{ s.start_datetime.strftime('%Y-%m-%d %H:%M') }} — {{ s.end_datetime.strftime('%H:%M') }} · {{ s.location }}
+						</p>
+						{% if s.description %}
+							<p>{{ s.description[:160] }}{% if s.description|length > 160 %}…{% endif %}</p>
+						{% endif %}
+					</article>
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>No sessions yet. <a href="{{ url_for('create_session') }}">Create the first one</a>.</p>
+	{% endif %}
+{% endblock %}

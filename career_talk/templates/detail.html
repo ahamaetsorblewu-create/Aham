@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<article>
+		<h1>{{ session.title }}</h1>
+		<p><strong>Speaker:</strong> {{ session.speaker }}</p>
+		<p><strong>When:</strong> {{ session.start_datetime.strftime('%Y-%m-%d %H:%M') }} — {{ session.end_datetime.strftime('%Y-%m-%d %H:%M') }}</p>
+		<p><strong>Where:</strong> {{ session.location }}</p>
+		{% if session.description %}
+			<p>{{ session.description }}</p>
+		{% endif %}
+		<p><a href="{{ url_for('index') }}">Back to list</a></p>
+	</article>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>New Session</h1>
+	<form method="post">
+		<label>
+			Title
+			<input type="text" name="title" required>
+		</label>
+		<label>
+			Speaker
+			<input type="text" name="speaker" required>
+		</label>
+		<label>
+			Location
+			<input type="text" name="location" required>
+		</label>
+		<label>
+			Start
+			<input type="datetime-local" name="start_datetime" required>
+		</label>
+		<label>
+			End
+			<input type="datetime-local" name="end_datetime" required>
+		</label>
+		<label>
+			Description
+			<textarea name="description" rows="4"></textarea>
+		</label>
+		<button type="submit">Create</button>
+		<a role="button" class="secondary" href="{{ url_for('index') }}">Cancel</a>
+	</form>
+{% endblock %}
