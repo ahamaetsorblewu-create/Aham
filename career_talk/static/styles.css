@@ -1,0 +1,4 @@
+main.container { margin-top: 2rem; }
+.flash { padding: .5rem .75rem; border-radius: 6px; }
+.flash.success { background: #e6ffed; color: #065f46; }
+.flash.error { background: #fee2e2; color: #7f1d1d; }
