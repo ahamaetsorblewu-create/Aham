@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VogueX | Modern Fashion</title>
+    <meta name="description" content="VogueX — a modern, responsive fashion storefront.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">VogueX</a>
+        <nav class="nav" id="site-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html" class="cart-link">Cart <span class="cart-count" id="cart-count">0</span></a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Redefine Your Style</h1>
+            <p>Discover curated looks, premium essentials, and timeless silhouettes. Step into the season with confidence.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="shop.html">Shop New Arrivals</a>
+              <a class="btn btn-outline" href="#featured">Explore Featured</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Fashion editorial"/>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Featured Picks</h2>
+            <p>Handpicked pieces loved by our stylists.</p>
+          </div>
+          <div id="featured-grid" class="product-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section-banner">
+        <div class="container banner">
+          <div class="banner-copy">
+            <h3>Summer Edit</h3>
+            <p>Light layers, airy fabrics, and elevated comfort.</p>
+            <a class="btn btn-primary" href="shop.html?category=Women">Shop Women</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop" alt="Summer fashion"/>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">VogueX</div>
+          <p>Minimal, modern, and made to last.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form id="newsletter-form">
+            <input type="email" placeholder="Email address" required>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+          <small id="newsletter-status" class="muted"></small>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small>© <span id="year"></span> VogueX. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

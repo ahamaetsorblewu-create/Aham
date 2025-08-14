@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | VogueX</title>
+    <meta name="description" content="About VogueX.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">VogueX</a>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html" class="active">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html" class="cart-link">Cart <span class="cart-count" id="cart-count">0</span></a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container prose">
+          <h1>Our Story</h1>
+          <p>VogueX is a design-led fashion house focused on creating beautiful, enduring wardrobe essentials. We partner with ethical manufacturers and use premium fabrics to deliver elevated everyday pieces.</p>
+          <h2>Craft, Quality, Responsibility</h2>
+          <p>We believe in thoughtful design, responsible sourcing, and small-batch production. Every piece is made to be worn, loved, and kept in rotation for years.</p>
+          <h2>Visit Us</h2>
+          <p>Showroom open by appointment in NYC and LA.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">VogueX</div>
+          <p>Minimal, modern, and made to last.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form id="newsletter-form">
+            <input type="email" placeholder="Email address" required>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+          <small id="newsletter-status" class="muted"></small>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small>© <span id="year"></span> VogueX. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
